@@ -11,7 +11,7 @@ import { htmlConverter } from '../../utils/utils';
 import 'swiper/swiper-bundle.css';
 import SwiperCore, { Autoplay } from 'swiper';
 import styles from './Hero.module.scss';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import useMediaQuery from '@mui/material/useMediaQuery';
 
 // Import Swiper styles
@@ -24,21 +24,21 @@ SwiperCore.use([Autoplay]);
 let items = [
   {
     "id": '1',
-    "image": 'https://picsum.photos/1920/600',
+    "image": '/hero-1.jpeg',
     "image_mobile": 'https://picsum.photos/900/1300',
-    "title": '120 millones de pesos al año para comenzar',
+    "title": 'Nuestros clientes validan nuestra visión',
   },
   {
     "id": '2',
-    "image": 'https://picsum.photos/1920/600',
+    "image": '/hero-2.jpeg',
     "image_mobile": 'https://picsum.photos/900/1300',
-    "title": 'Constructiva',
+    "title": 'Constructiva apoyando el Ecosistema',
   },
   {
     "id": '3',
     "image": 'https://picsum.photos/1920/600',
     "image_mobile": 'https://picsum.photos/900/1300',
-    "title": 'La mejor empresa de Chile',
+    "title": 'Top 20 mejores empresas de Chile',
   },
 ];
 

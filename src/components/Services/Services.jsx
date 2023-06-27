@@ -22,12 +22,14 @@ let items = [
   },
 ];
 
-const Services = () => {
+const Services = ({title}) => {
   return (  
     <section className={styles.servicePanel}>
       <Container>
-        <h2 className={styles.title}>Servicios</h2>
-        <Grid container spacing={1}>
+        <div className="title-container">
+          <h2 className="title">{title}</h2>
+        </div>
+        <Grid container spacing={2}>
           {items &&
             items.map((item) => (
               <Grid key={item.id} item xs={12} md={4}>

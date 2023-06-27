@@ -1,0 +1,16 @@
+.serviceCard{
+  box-shadow: 0 1px 12px rgb(0 0 0 / 7%);
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 2rem 1rem;
+  svg{
+    color: $black;
+  }
+  @media only screen and (min-width: $breakpoint_md) {
+    min-height: 300px;
+  }
+}

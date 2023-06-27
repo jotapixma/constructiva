@@ -48,14 +48,14 @@ const Purpose = ({title}) => {
               {items &&
                 <ul className={styles.unorderList}>
                   {items.map((item) => (
-                    <li><CheckCircleIcon/>{item.title}</li>
+                    <li key={item.id}><CheckCircleIcon/>{item.title}</li>
                   ))}
                 </ul>
               }
             </Grid>
             <Grid item xs={12} md={4}>
               <figure className={styles.imgMask}>
-                <Image src="/purpose.jpeg" width={2499} height={1669} layout="responsive"></Image>
+                <Image src="/purpose.jpeg" width={2499} height={1669} layout="responsive" alt="propósito"></Image>
               </figure>
             </Grid>
           </Grid>

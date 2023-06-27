@@ -34,8 +34,8 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        align-items: center;;
-        padding: 3rem 1rem;
+        align-items: center;
+        padding: 0 1rem;
         @media only screen and (min-width: $breakpoint_md) {
           max-width: 80%;
         }
@@ -46,6 +46,7 @@
           margin: 0;
           font-size: 22px;
           text-align: center;
+          padding-bottom: 3rem;
           @media only screen and (min-width: $breakpoint_md) {
             letter-spacing: 1px;
             font-size: 32px;

@@ -18,7 +18,7 @@ let items = [
   {
     "id": '3',
     "icon": 'https://picsum.photos/1920/600',
-    "title": 'Otro Servicio',
+    "title": 'Inspección recepción de inmueble',
   },
 ];
 

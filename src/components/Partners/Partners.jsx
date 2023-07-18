@@ -1,54 +1,55 @@
 import React from 'react';
 import Container from '@mui/material/Container';
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import BrandCard from '../Cards/BrandCard/BrandCard'
+import { Navigation } from 'swiper/modules';
+import SwiperCore, { Autoplay } from 'swiper';
+import BrandCard from '../Cards/BrandCard/BrandCard';
+import Box from '@mui/material/Box';
+import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
+import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import styles from './Partners.module.scss'
 
 // Import Swiper styles
 import 'swiper/css';
+// import 'swiper/swiper-bundle.css';
+// import 'swiper/swiper-bundle.min.css';
 import 'swiper/css/navigation';
+
+SwiperCore.use([Autoplay]);
 
 let brands = [
   {
-      "id": 38,
-      "title": "Ultimate Fitness",
+      "title": "1",
       "url": "/ultimate-fitness/",
       "image": "/brands/constructiva.jpg"
   },
   {
-      "id": 39,
-      "title": "Versus Socks",
+      "title": "2",
       "url": "/versus-socks/",
       "image": "/brands/antumanal.webp"
   },
   {
-      "id": 40,
-      "title": "Wild Foods",
+      "title": "3",
       "url": "/wild-foods/",
       "image": "/brands/vasco.png"
   },
   {
-      "id": 41,
-      "title": "COMPRES SPORT",
+      "title": "4",
       "url": "/compres-sport/",
       "image": "/brands/verces.jpg"
   },
   {
-    "id": 42,
-    "title": "Ultimate Fitness",
+    "title": "5",
     "url": "/ultimate-fitness/",
     "image": "/brands/constructiva.jpg"
   },
   {
-    "id": 43,
-    "title": "COMPRES SPORT",
+    "title": "6",
     "url": "/compres-sport/",
-    "image": "/brands/verces.jpg"
-},
+    "image": "/brands/vasco.png"
+  }
 ]
+
 
 const CategoriesPanel  = ({title}) => {
   const [swiper, setSwiper] = React.useState(null);
@@ -58,6 +59,7 @@ const CategoriesPanel  = ({title}) => {
   };
 
   const handleNextSlide = () => {
+    console.log('entre aqui');
     swiper.slideNext();
   };
   
@@ -67,29 +69,33 @@ const CategoriesPanel  = ({title}) => {
         <div className="title-container">
           <h2 className="title">{title}</h2>
         </div>
-        <Swiper
-          modules={[Navigation]}
-          spaceBetween={5}
-          slidesPerView={3.5}
-          loop={true}
-          breakpoints={{
-            1024: {
-              slidesPerView: 5,
-            },
-          }}
-          // onSlideChange={() => console.log('slide change')}
-          onSwiper={(swiper) =>{ 
-            setSwiper(swiper)
-          }}
-        >
-          {brands && brands.length > 0 &&
-            brands.map((item) => (
-              <SwiperSlide key={item.id}>
-                <BrandCard brand={item}/>
-              </SwiperSlide>
-            ))
-          }
-        </Swiper>
+        <Box className="slick-container">
+          <button className="slick-arrow left-arrow" type="button" onClick={handlePrevSlide}><NavigateBeforeIcon/></button>
+          <Swiper
+            modules={[Navigation]}
+            spaceBetween={8}
+            slidesPerView={2.5}
+            autoplay={{ delay: 5000 }}
+            loop={true}
+            breakpoints={{
+              1024: {
+                slidesPerView: 5,
+              },
+            }}
+            onSwiper={(swiper) =>{ 
+              setSwiper(swiper)
+            }}
+          >
+            {brands && brands.length > 0 &&
+              brands.map((item, index) => (
+                <SwiperSlide key={index}>
+                  <BrandCard brand={item}/>
+                </SwiperSlide>
+              ))
+            }
+          </Swiper>
+          <button className="slick-arrow right-arrow" type="button" onClick={handleNextSlide}><NavigateNextIcon/></button>
+        </Box>
       </Container>
     </section>
 

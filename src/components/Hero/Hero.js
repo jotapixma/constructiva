@@ -1,15 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { useSwiper } from 'swiper/react';
 import Container from '@mui/material/Container';
 import EastIcon from '@mui/icons-material/East';
-import { Navigation, Pagination } from 'swiper';
+import { Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Button } from '../Buttons/Button';
-import { Box } from '@mui/system';
+// import { Swiper, SwiperSlide } from 'swiper/swiper-react.mjs';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import { htmlConverter } from '../../utils/utils';
-import 'swiper/swiper-bundle.css';
-import SwiperCore, { Autoplay } from 'swiper';
+// import SwiperCore, { Autoplay } from 'swiper';
 import styles from './Hero.module.scss';
 import Image from "next/legacy/image";
 import useMediaQuery from '@mui/material/useMediaQuery';
@@ -19,7 +16,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-SwiperCore.use([Autoplay]);
+// SwiperCore.use([Autoplay]);
 
 let items = [
   {
@@ -44,41 +41,36 @@ let items = [
 
 
 export default function Hero({sliderItems}) {
-  const [swiper, setSwiper] = React.useState(null);
-  const [showPrevArrow, setShowPrevArrow] = useState(false);
-  const [showNextArrow, setShowNextArrow] = useState(true);
+  // const [swiper, setSwiper] = React.useState(null);
+  const swiper = useSwiper();
+  // const [showPrevArrow, setShowPrevArrow] = useState(false);
+  // const [showNextArrow, setShowNextArrow] = useState(true);
   const matchesMd = useMediaQuery('(min-width:900px)');
 
-  const handlePrevSlide = () => {
-    swiper.slidePrev();
-  };
+  // const handlePrevSlide = () => {
+  //   swiper.slidePrev();
+  // };
 
-  const handleNextSlide = () => {
-    swiper.slideNext();
-  };
-
-  // useEffect(() => {
-  //   swiper?.on('slideChange', () => {
-  //     setShowPrevArrow(swiper?.activeIndex !== 0);
-  //     setShowNextArrow(swiper?.activeIndex !== (swiper?.slides.length - 1));
-  //   });
-  // }, [swiper]);
+  // const handleNextSlide = () => {
+  //   swiper.slideNext();
+  // };
 
   return (
     <React.Fragment>
       <div className={styles.heroContainer}>
         {/* ${!showPrevArrow && styles.disabled} */}
-        <button type="button" className={`${styles.genericArrow} ${styles.leftArrow} `} onClick={handlePrevSlide}><ArrowBackIosIcon/></button>
+        <button type="button" className={`${styles.genericArrow} ${styles.leftArrow} `} onClick={() => swiper.slidePrev()}><ArrowBackIosIcon/></button>
         <Swiper
           modules={[Navigation, Pagination]}
           // autoplay={{ delay: 6000 }}
           loop={true}
           slidesPerView={1}
-          pagination={{ clickable: true }}
-          onSwiper={(swiper) =>{ 
-            // console.log(swiper)
-            setSwiper(swiper)
-          }}
+          navigation
+          // pagination={{ clickable: true }}
+          // onSwiper={(swiper) =>{ 
+          //   // console.log(swiper)
+          //   setSwiper(swiper)
+          // }}
         >
           {items &&
             items.map((item) => (
@@ -112,18 +104,12 @@ export default function Hero({sliderItems}) {
                       />
                     </figure>
                   )}
-                  {/* <div className={styles.bannerMobile}>
-                    <figure>
-                      <img src={item.image_mobile} alt="hero" className="img-responsive" />
-                    </figure>
-                  </div> */}
                 </article>
               </SwiperSlide>
             ))
           }
         </Swiper>
-        {/* ${!showNextArrow && styles.disabled} */}
-        <button type="button" className={`${styles.genericArrow} ${styles.rightArrow}`} onClick={handleNextSlide}><ArrowForwardIosIcon/></button>
+        {/* <button type="button" className={`${styles.genericArrow} ${styles.rightArrow}`} onClick={() => swiper.slideNext()}><ArrowForwardIosIcon/></button> */}
 
       </div>
 

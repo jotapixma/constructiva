@@ -1,6 +1,10 @@
 .brandCard{
   border-radius: 8px;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
   &__mask{
     img{
       // width: 100%;

@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { useSwiper } from 'swiper/react';
-import Container from '@mui/material/Container';
-import EastIcon from '@mui/icons-material/East';
-import { Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-// import { Swiper, SwiperSlide } from 'swiper/swiper-react.mjs';
+import SwiperCore, { Navigation, Pagination, Autoplay } from 'swiper';
+import { useSwiper } from 'swiper/react';
+import EastIcon from '@mui/icons-material/East';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-// import SwiperCore, { Autoplay } from 'swiper';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import styles from './Hero.module.scss';
 import Image from "next/legacy/image";
 import useMediaQuery from '@mui/material/useMediaQuery';
@@ -16,7 +14,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-// SwiperCore.use([Autoplay]);
+SwiperCore.use([Autoplay]);
+
 
 let items = [
   {
@@ -41,36 +40,33 @@ let items = [
 
 
 export default function Hero({sliderItems}) {
-  // const [swiper, setSwiper] = React.useState(null);
-  const swiper = useSwiper();
-  // const [showPrevArrow, setShowPrevArrow] = useState(false);
-  // const [showNextArrow, setShowNextArrow] = useState(true);
+  const [swiper, setSwiper] = React.useState(null);
+
   const matchesMd = useMediaQuery('(min-width:900px)');
 
-  // const handlePrevSlide = () => {
-  //   swiper.slidePrev();
-  // };
+  const handlePrevSlide = () => {
+    swiper.slidePrev();
+  };
 
-  // const handleNextSlide = () => {
-  //   swiper.slideNext();
-  // };
+  const handleNextSlide = () => {
+    swiper.slideNext();
+  };
+
 
   return (
     <React.Fragment>
       <div className={styles.heroContainer}>
         {/* ${!showPrevArrow && styles.disabled} */}
-        <button type="button" className={`${styles.genericArrow} ${styles.leftArrow} `} onClick={() => swiper.slidePrev()}><ArrowBackIosIcon/></button>
+        <button type="button" className={`${styles.genericArrow} ${styles.leftArrow} `} onClick={handlePrevSlide}><ArrowBackIosIcon/></button>
         <Swiper
-          modules={[Navigation, Pagination]}
-          // autoplay={{ delay: 6000 }}
+          modules={[Pagination]}
+          autoplay={{ delay: 5000 }}
           loop={true}
           slidesPerView={1}
-          navigation
-          // pagination={{ clickable: true }}
-          // onSwiper={(swiper) =>{ 
-          //   // console.log(swiper)
-          //   setSwiper(swiper)
-          // }}
+          pagination={{ clickable: true }}
+          onSwiper={(swiper) =>{ 
+            setSwiper(swiper)
+          }}
         >
           {items &&
             items.map((item) => (
@@ -109,7 +105,7 @@ export default function Hero({sliderItems}) {
             ))
           }
         </Swiper>
-        {/* <button type="button" className={`${styles.genericArrow} ${styles.rightArrow}`} onClick={() => swiper.slideNext()}><ArrowForwardIosIcon/></button> */}
+        <button type="button" className={`${styles.genericArrow} ${styles.rightArrow}`} onClick={handleNextSlide}><ArrowForwardIosIcon/></button>
 
       </div>
 

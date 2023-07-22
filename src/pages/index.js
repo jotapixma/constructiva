@@ -23,7 +23,7 @@ export default function Home() {
           <Hero/>
           <Services title="Servicios"/>
           <Purpose title="Nuestro propósito"/>
-          <Partners title="Han confiado en nosotros"/>
+          {/* <Partners title="Han confiado en nosotros"/> */}
         </Layout>
       </main>
     </>

@@ -5,6 +5,30 @@
   p{
     color: $white;
     font-size: 0.9rem;
-    text-align: center;
+  }
+  .gridColumns{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    @media only screen and (min-width: $breakpoint_md){
+      grid-template-columns: repeat(5, 1fr);
+    }
+    .itemColumn{
+      .unorderList{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        span{
+          font-weight: 700;
+        }
+        li{
+          font-weight: 400;
+          font-size: 0.9rem;
+          margin: 0.6rem 0;
+          color: $white;
+          color: $white;
+        }
+      }
+    }
   }
 }

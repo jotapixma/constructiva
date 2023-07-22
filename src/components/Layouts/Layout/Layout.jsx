@@ -14,7 +14,7 @@ export default function Layout({children}) {
       <Box>
         {children}
       </Box>
-        <Footer/>
+      <Footer/>
     </React.Fragment>
   )
 }

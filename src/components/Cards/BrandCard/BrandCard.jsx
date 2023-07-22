@@ -8,13 +8,12 @@ const BrandCard = ({brand}) => {
 
   return (
     <article className={styles.brandCard}>
-      <p>{brand.title}</p>
       <figure className={styles.brandCard__mask}>
         <Image 
           src={brand.image} 
           width={170} 
           height={170} 
-          layout="intrinsic" 
+          layout="fill" 
           alt={brand.title} 
         />
       </figure>

@@ -1,7 +1,7 @@
 import React from 'react';
 import Container from '@mui/material/Container';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
+import { Navigation } from 'swiper';
 import SwiperCore, { Autoplay } from 'swiper';
 import BrandCard from '../Cards/BrandCard/BrandCard';
 import Box from '@mui/material/Box';

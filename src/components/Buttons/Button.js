@@ -1,6 +1,7 @@
 import { styled } from '@mui/material/styles';
 import MuiButton from '@mui/material/Button';
 
+
 export const Button = styled(MuiButton)(({theme, secondary, w100, small, uppercase, hoverWhite, opacity}) => ({
   fontFamily: 'Outfit',
   opacity: opacity ? '80%' : 1,

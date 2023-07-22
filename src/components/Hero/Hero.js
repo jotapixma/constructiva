@@ -5,9 +5,9 @@ import { useSwiper } from 'swiper/react';
 import EastIcon from '@mui/icons-material/East';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import styles from './Hero.module.scss';
 import Image from "next/legacy/image";
 import useMediaQuery from '@mui/material/useMediaQuery';
+import styles from './Hero.module.scss';
 
 // Import Swiper styles
 import 'swiper/css';

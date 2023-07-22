@@ -63,16 +63,16 @@ button{
 .title-container{
   text-align: center;
   .title{
-    color: $primary;
+    color: $secondary;
     display: inline-flex;
     text-transform: uppercase;
-    border-bottom: 2px solid $secondary;
+    border-bottom: 2px solid $primary;
     margin-bottom: 1rem;
   }
 }
 
 p,li{
-  color: $primary;
+  color: $secondary;
 }
 
 h2,h3{

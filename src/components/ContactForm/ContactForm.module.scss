@@ -1,0 +1,10 @@
+.formPanel{
+  padding: 3rem 0;
+  background-color: $white;
+  .formBox{
+    border: 1px solid $primary;
+    padding: 4rem;
+    border-radius: 16px;
+    margin: 2rem 0;
+  }
+}

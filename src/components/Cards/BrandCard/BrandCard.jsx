@@ -4,7 +4,6 @@ import Link from 'next/link';
 import styles from './BrandCard.module.scss'
 
 const BrandCard = ({brand}) => {
-  // console.log('brand:', brand);
 
   return (
     <article className={styles.brandCard}>
@@ -13,8 +12,8 @@ const BrandCard = ({brand}) => {
           src={brand.image} 
           width={170} 
           height={170} 
-          layout="fill" 
-          alt={brand.title} 
+          layout="responsive" 
+          alt="brand" 
         />
       </figure>
     </article>

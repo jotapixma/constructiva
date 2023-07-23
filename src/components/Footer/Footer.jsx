@@ -2,9 +2,35 @@ import React from 'react';
 import Container from '@mui/material/Container';
 import Image from 'next/image';
 import FooterWinch from './FooterWinch/FooterWinch';
+import RrssItem from './RrssItem/RrssItem';
+import Box from '@mui/material/Box';
 import styles from './Footer.module.scss';
 
 const Footer = () => {
+
+  let items = [
+    {
+      "id": '1',
+      "title": 'facebook',
+      "link": '/',
+    },
+    // {
+    //   "id": '2',
+    //   "title": 'whatsapp',
+    //   "link": '/',
+    // },
+    {
+      "id": '3',
+      "title": 'instagram',
+      "link": '/',
+    },
+    {
+      "id": '4',
+      "title": 'linkedin',
+      "link": '/',
+    }
+  ];
+
   return (  
     <footer className={styles.footer}>
       <Container>
@@ -12,9 +38,9 @@ const Footer = () => {
           <div className={styles.itemColumn}>
             <figure>
               <Image 
-                src="/logo-pepsi.png"
+                src="/ultimate-logo.png"
                 width={162} height={25} 
-                layout="responsive"  
+                layout="intrinsic"  
                 alt="logo"
               />
             </figure>
@@ -37,6 +63,13 @@ const Footer = () => {
           <div className={styles.itemColumn}>
             <ul className={styles.unorderList}>
               <span>Siguenos</span>
+              {items &&
+                <Box sx={{ display: 'flex', gap: '1rem', marginTop: '0.8rem' }}>
+                  {items.map((item, index) => (
+                    <RrssItem item={item} key={index}/>
+                  ))}
+                </Box>
+              }
             </ul>
           </div>
         </div>

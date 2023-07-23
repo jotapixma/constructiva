@@ -27,10 +27,11 @@
   }
   &__rights{
     .textBrand{
-      font-size: 16px;
+      font-size: 1rem;
       font-weight: 400;
       font-family: $fontFamilyPrimary;
       -webkit-font-smoothing: antialiased;
+      color: $white;
     }
   }
 }

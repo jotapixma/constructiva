@@ -25,7 +25,7 @@ export default function Home() {
           <Services title="Servicios"/>
           <Purpose title="Nuestro propósito"/>
           <ContactForm title="Contactános"/>
-          {/* <Partners title="Han confiado en nosotros"/> */}
+          <Partners title="Han confiado en nosotros"/>
         </Layout>
       </main>
     </>

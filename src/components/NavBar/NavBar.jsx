@@ -14,6 +14,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import Image from 'next/image';
 import styles from './NavBar.module.scss';
 
 const drawerWidth = 240;
@@ -29,9 +30,14 @@ function DrawerAppBar(props) {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        Constructora LV
-      </Typography>
+      <figure>
+        <Image 
+          src="/ultimate-logo.png"
+          width={162} height={25} 
+          layout="intrinsic"  
+          alt="logo"
+        />
+      </figure>
       <Divider />
       <List>
         {navItems.map((item) => (
@@ -61,13 +67,18 @@ function DrawerAppBar(props) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+          <Box
+            sx={{ flexGrow: 1, display: { sm: 'block'  } }}
           >
-            Constructora LV
-          </Typography>
+            <figure>
+              <Image 
+                src="/ultimate-logo.png"
+                width={162} height={25} 
+                layout="intrinsic"  
+                alt="logo"
+              />
+            </figure>
+          </Box>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
               <Button key={item} sx={{ color: '#fff' }}>

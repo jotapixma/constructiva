@@ -28,7 +28,7 @@ let items = [
     "id": '2',
     "image": '/hero-2.jpeg',
     "image_mobile": 'https://picsum.photos/900/1300',
-    "title": 'Constructiva apoyando el Ecosistema',
+    "title": 'Constructora LV apoyando el Ecosistema',
   },
   {
     "id": '3',

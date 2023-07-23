@@ -3,7 +3,7 @@ import MuiButton from '@mui/material/Button';
 
 
 export const Button = styled(MuiButton)(({theme, secondary, w100, small, uppercase, hoverWhite, opacity}) => ({
-  fontFamily: 'Outfit',
+  fontFamily: 'Roboto',
   opacity: opacity ? '80%' : 1,
   width: w100 ? '100%' : 'auto',
   height: small ? '30px' : '40px',
@@ -11,7 +11,7 @@ export const Button = styled(MuiButton)(({theme, secondary, w100, small, upperca
   textTransform: uppercase ? 'uppercase' : 'initial',
   fontSize: small ? '0.850rem' : '0.950rem',
   backgroundColor: secondary ? theme.colors.secondary : theme.colors.primary,
-  color: theme.colors.white,
+  color: theme.colors.secondary,
   gap: '0.5rem',
   padding: '0.5rem 1rem',
   '&:hover': {

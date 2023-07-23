@@ -2,7 +2,6 @@ import React from 'react';
 import Container from '@mui/material/Container';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper';
-import SwiperCore, { Autoplay } from 'swiper';
 import BrandCard from '../Cards/BrandCard/BrandCard';
 import Box from '@mui/material/Box';
 import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
@@ -11,41 +10,28 @@ import styles from './Partners.module.scss'
 
 // Import Swiper styles
 import 'swiper/css';
-// import 'swiper/swiper-bundle.css';
-// import 'swiper/swiper-bundle.min.css';
 import 'swiper/css/navigation';
 
-SwiperCore.use([Autoplay]);
 
 let brands = [
   {
-      "title": "1",
-      "url": "/ultimate-fitness/",
+      "url": "/",
       "image": "/brands/constructiva.jpg"
   },
   {
-      "title": "2",
-      "url": "/versus-socks/",
-      "image": "/brands/antumanal.webp"
-  },
-  {
-      "title": "3",
-      "url": "/wild-foods/",
+      "url": "/",
       "image": "/brands/vasco.png"
   },
   {
-      "title": "4",
-      "url": "/compres-sport/",
+      "url": "/",
       "image": "/brands/verces.jpg"
   },
   {
-    "title": "5",
-    "url": "/ultimate-fitness/",
+    "url": "/",
     "image": "/brands/constructiva.jpg"
   },
   {
-    "title": "6",
-    "url": "/compres-sport/",
+    "url": "/",
     "image": "/brands/vasco.png"
   }
 ]
@@ -59,7 +45,6 @@ const CategoriesPanel  = ({title}) => {
   };
 
   const handleNextSlide = () => {
-    console.log('entre aqui');
     swiper.slideNext();
   };
   
@@ -74,14 +59,13 @@ const CategoriesPanel  = ({title}) => {
           <Swiper
             modules={[Navigation]}
             spaceBetween={8}
-            slidesPerView={2.5}
-            autoplay={{ delay: 5000 }}
+            slidesPerView={5}
             loop={true}
-            breakpoints={{
-              1024: {
-                slidesPerView: 5,
-              },
-            }}
+            // breakpoints={{
+            //   1024: {
+            //     slidesPerView: 5,
+            //   },
+            // }}
             onSwiper={(swiper) =>{ 
               setSwiper(swiper)
             }}

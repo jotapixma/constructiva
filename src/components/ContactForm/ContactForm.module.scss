@@ -1,13 +1,15 @@
 .formPanel{
-  padding: 3rem 0;
-  background-color: $white;
+  padding: 2rem 0;
+  background-color: $green;
+  border-radius: 16px 16px 0 0;
   .formBox{
-    border: 1px solid $primary;
+    border: 1px solid $white;
     border-radius: 16px;
     padding: 3rem 2rem;
-    margin: 2rem 0;
+    max-width: 80%;
+    margin: 1.5rem auto;
   }
   @media only screen and (min-width: $breakpoint_md) {
-    padding: 4rem;
+    padding: 3rem 0;
   }
 }

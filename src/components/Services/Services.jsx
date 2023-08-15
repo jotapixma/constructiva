@@ -19,7 +19,12 @@ let items = [
   {
     "id": '3',
     "icon": 'inspeccion',
-    "title": 'Inspección y recepción de inmueble',
+    "title": 'Inspección de inmueble',
+  },
+  {
+    "id": '3',
+    "icon": 'construccion',
+    "title": 'Recepción de inmueble',
   },
 ];
 
@@ -34,7 +39,7 @@ const Services = ({title}) => {
           <Grid container spacing={2}>
             {items &&
               items.map((item) => (
-                <Grid key={item.id} item xs={12} md={4}>
+                <Grid key={item.id} item xs={12} md={3}>
                   <ServiceCard item={item}/>
                 </Grid>
               ))

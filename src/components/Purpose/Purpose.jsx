@@ -61,6 +61,7 @@ const Purpose = ({title}) => {
           </Grid>
         </Box>
       </Container>
+      <div className="divisor-line divisor-line--green"></div>
     </section>
   );
 }

@@ -60,6 +60,11 @@ button{
     border-bottom: 2px solid $primary;
     margin-bottom: 1rem;
   }
+  &__white{
+    .title{
+      color: $white;
+    }  
+  }
 }
 
 p,li{
@@ -68,4 +73,13 @@ p,li{
 
 h2,h3{
   color: $black;
+}
+
+.divisor-line{
+  border-bottom: 1px solid;
+  max-width: 95%;
+  margin: 3rem auto 1rem;
+  &--green{
+    border-color: $primary;
+  }
 }

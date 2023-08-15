@@ -38,7 +38,7 @@ const ContactForm = ({title}) => {
   return (  
     <section className={styles.formPanel}>
       <Container>
-        <div className="title-container">
+        <div className="title-container title-container__white">
           <h2 className="title">{title}</h2>
         </div>  
         <Box

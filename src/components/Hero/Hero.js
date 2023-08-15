@@ -82,7 +82,7 @@ export default function Hero({sliderItems}) {
                       <Image 
                         src={item.image} 
                         width={1900} 
-                        height={600} 
+                        height={700} 
                         alt={item.title} 
                         priority={true}
                         layout="responsive"

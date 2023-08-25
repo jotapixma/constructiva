@@ -6,10 +6,12 @@
     border: 1px solid $white;
     border-radius: 16px;
     padding: 3rem 2rem;
-    max-width: 80%;
-    margin: 1.5rem auto;
+    margin: 1.5rem 0.5rem;
   }
   @media only screen and (min-width: $breakpoint_md) {
     padding: 3rem 0;
+  }
+  .inputField{
+    border-color: $white !important;
   }
 }

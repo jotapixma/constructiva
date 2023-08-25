@@ -23,6 +23,29 @@
       }
     }
   }
+  &__maskMobile{
+    position: relative;
+    max-height: 216px;
+    overflow: hidden;
+    &:before{
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(32, 33, 35, 0.6);
+      transition: all 0.5s ease-in-out;
+      z-index: 10;
+    } 
+    img{
+      transition: all .25s ease-in-out;
+      &:hover{
+        transform: scale(1.1);
+        cursor: pointer;
+      }
+    }
+  }
   &__title{
     position: absolute;
     left: 50%;

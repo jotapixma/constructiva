@@ -36,7 +36,7 @@ const ContactForm = ({title}) => {
   }
 
   return (  
-    <section className={styles.formPanel}>
+    <section className={`contact-form ${styles.formPanel}`}>
       <Container>
         <div className="title-container title-container__white">
           <h2 className="title">{title}</h2>
@@ -51,6 +51,7 @@ const ContactForm = ({title}) => {
           <Grid container spacing={2}>
             <Grid item xs={12} md={6}>
               <TextField
+                className={styles.inputField}
                 fullWidth
                 type="text"
                 size="small"

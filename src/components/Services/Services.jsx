@@ -39,7 +39,7 @@ const Services = ({title}) => {
           <Grid container spacing={2}>
             {items &&
               items.map((item) => (
-                <Grid key={item.id} item xs={12} md={3}>
+                <Grid key={item.id} item xs={6} md={3}>
                   <ServiceCard item={item}/>
                 </Grid>
               ))

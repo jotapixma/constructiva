@@ -59,11 +59,17 @@ button{
     text-transform: uppercase;
     border-bottom: 2px solid $primary;
     margin-bottom: 1rem;
+    font-size: 1.3rem;
   }
   &__white{
     .title{
       color: $white;
     }  
+  }
+  @media only screen and (min-width: $breakpoint_md) {
+    .title{
+      font-size: 1.8rem;
+    }
   }
 }
 
@@ -78,8 +84,26 @@ h2,h3{
 .divisor-line{
   border-bottom: 1px solid;
   max-width: 95%;
-  margin: 3rem auto 1rem;
+  margin: 3rem auto 0;
   &--green{
     border-color: $primary;
+  }
+}
+
+.contact-form{
+  fieldset{
+    border-color: $white !important;
+  }
+  
+  label{
+    color: $white !important;
+  }
+  
+  input{
+    color: $white !important;
+  }
+  
+  textarea{
+    color: $white !important;
   }
 }

@@ -18,7 +18,7 @@ import Image from 'next/image';
 import styles from './NavBar.module.scss';
 
 const drawerWidth = 240;
-const navItems = ['¿Que hacemos?', 'Proyectos', 'Nosotros', 'Contacto'];
+const navItems = ['¿Que hacemos?', 'Nosotros', 'Contacto'];
 
 function DrawerAppBar(props) {
   const { window } = props;

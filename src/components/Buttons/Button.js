@@ -11,11 +11,12 @@ export const Button = styled(MuiButton)(({theme, secondary, w100, small, upperca
   textTransform: uppercase ? 'uppercase' : 'initial',
   fontSize: small ? '0.850rem' : '0.950rem',
   backgroundColor: secondary ? theme.colors.secondary : theme.colors.white,
-  color: theme.colors.secondary,
+  color: secondary ? theme.colors.white : theme.colors.secondary ,
   gap: '0.5rem',
   padding: '0.5rem 1rem',
   '&:hover': {
     backgroundColor: secondary ? theme.colors.primary : theme.colors.secondary,
+    color: secondary ? theme.colors.secondary : theme.colors.white
   },
   '&:disabled,&[disabled]': {
     backgroundColor: theme.colors.disabled,

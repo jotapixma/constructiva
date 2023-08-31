@@ -8,17 +8,17 @@ import styles from './Support.module.scss';
 let items = [
   {
     "id": '1',
-    "image": '/support-3.jpeg',
+    "image": '/habilitacion-espacios-3.jpg',
     "title": 'Habilitación de Espacios',
   },
   {
     "id": '2',
-    "image": '/support-2.jpeg',
+    "image": '/obras-civiles.jpeg',
     "title": 'Obras Civiles',
   },
   {
     "id": '3',
-    "image": '/support-1.jpeg',
+    "image": '/asesorias-2.jpeg',
     "title": 'Asesorias',
   },
 ];

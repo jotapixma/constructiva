@@ -20,19 +20,19 @@ SwiperCore.use([Autoplay]);
 let items = [
   {
     "id": '1',
-    "image": '/hero-1.jpeg',
-    "image_mobile": 'https://picsum.photos/900/1300',
+    "image": '/hero-1.jpg',
+    "image_mobile": '/hero-1-mobile.jpeg',
     "title": 'Nuestros clientes validan nuestra visión',
   },
   {
     "id": '2',
-    "image": '/hero-2.jpeg',
+    "image": '/hero-3.jpeg',
     "image_mobile": 'https://picsum.photos/900/1300',
     "title": 'Constructora LV apoyando el Ecosistema',
   },
   {
     "id": '3',
-    "image": 'https://picsum.photos/1920/600',
+    "image": '/hero-4.jpg',
     "image_mobile": 'https://picsum.photos/900/1300',
     "title": 'Top 20 mejores empresas de Chile',
   },
@@ -82,7 +82,7 @@ export default function Hero({sliderItems}) {
                       <Image 
                         src={item.image} 
                         width={1900} 
-                        height={700} 
+                        height={900} 
                         alt={item.title} 
                         priority={true}
                         layout="responsive"

@@ -32,7 +32,7 @@ function DrawerAppBar(props) {
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <figure>
         <Image 
-          src="/ultimate-logo.png"
+          src="/logo-constructora-lv-white.png"
           width={162} height={25} 
           layout="intrinsic"  
           alt="logo"
@@ -72,7 +72,7 @@ function DrawerAppBar(props) {
           >
             <figure>
               <Image 
-                src="/ultimate-logo.png"
+                src="/logo-constructora-lv-white.png"
                 width={162} height={25} 
                 layout="intrinsic"  
                 alt="logo"

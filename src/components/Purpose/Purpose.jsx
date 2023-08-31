@@ -35,8 +35,7 @@ const Purpose = ({title}) => {
           <h2 className="title">{title}</h2>
         </div>
         <div className={styles.descriptionBox}>
-          <p>En cada proyecto que realizamos creamos espacios corporativos excepcionales.</p>
-          <p>Nuestras soluciones se basan en cuatro pilares fundamentales:</p>
+          <p>Diseño y construcción de interiores y exteriores, priorizando la calidad de nuestros trabajos, el bienestar de nuestro equipo y minimizando nuestro impacto en el medio ambiente.</p>
         </div>
         <Box className={styles.bodyPanel}>
           <Grid container 
@@ -44,7 +43,7 @@ const Purpose = ({title}) => {
             justifyContent="center"
             alignItems="center"
             spacing={1}>
-            <Grid item xs={12} md={8}>
+            {/* <Grid item xs={12} md={8}>
               {items &&
                 <ul className={styles.unorderList}>
                   {items.map((item) => (
@@ -52,10 +51,10 @@ const Purpose = ({title}) => {
                   ))}
                 </ul>
               }
-            </Grid>
-            <Grid item xs={12} md={4}>
+            </Grid> */}
+            <Grid item xs={12} md={8}>
               <figure className={styles.imgMask}>
-                <Image src="/purpose.jpeg" width={2499} height={1669} layout="responsive" alt="propósito"></Image>
+                <Image src="/purpose.jpeg" width={1200} height={500} layout="responsive" alt="propósito"></Image>
               </figure>
             </Grid>
           </Grid>

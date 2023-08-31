@@ -16,15 +16,7 @@ import 'swiper/css/navigation';
 let brands = [
   {
       "url": "/",
-      "image": "/brands/constructiva.jpg"
-  },
-  {
-      "url": "/",
-      "image": "/brands/vasco.png"
-  },
-  {
-      "url": "/",
-      "image": "/brands/verces.jpg"
+      "image": "/brands/logo-antumanal.webp"
   },
   {
     "url": "/",
@@ -32,8 +24,16 @@ let brands = [
   },
   {
     "url": "/",
-    "image": "/brands/vasco.png"
-  }
+    "image": "/brands/pedidosya.svg"
+  },
+  {
+    "url": "/",
+    "image": "/brands/cmip.jpeg"
+  },
+  {
+    "url": "/",
+    "image": "/brands/arqboutique.jpg"
+  },
 ]
 
 

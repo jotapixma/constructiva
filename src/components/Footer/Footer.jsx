@@ -9,11 +9,11 @@ import styles from './Footer.module.scss';
 const Footer = () => {
 
   let items = [
-    {
-      "id": '1',
-      "title": 'facebook',
-      "link": '/',
-    },
+    // {
+    //   "id": '1',
+    //   "title": 'facebook',
+    //   "link": '/',
+    // },
     // {
     //   "id": '2',
     //   "title": 'whatsapp',
@@ -22,12 +22,12 @@ const Footer = () => {
     {
       "id": '3',
       "title": 'instagram',
-      "link": '/',
+      "link": 'https://www.instagram.com/constructora.lv/',
     },
     {
       "id": '4',
       "title": 'linkedin',
-      "link": '/',
+      "link": 'https://www.linkedin.com/in/constructora-lv-spa-002885270',
     }
   ];
 
@@ -38,7 +38,7 @@ const Footer = () => {
           <div className={styles.itemColumn}>
             <figure>
               <Image 
-                src="/ultimate-logo.png"
+                src="/logo-constructora-lv-white.png"
                 width={162} height={25} 
                 layout="intrinsic"  
                 alt="logo"
@@ -48,9 +48,9 @@ const Footer = () => {
           <div className={styles.itemColumn}>
             <ul className={styles.unorderList}>
               <span>Contacto</span>
-              <li>+56 981 7865 22</li>
-              <li>pvalero@lvconstructora.cl</li>
-              <li>Cerro el Plomo #4390, oficina 44, Las Condes, Santiago, Chile.</li>
+              <li>+56 9 6104 5977</li>
+              <li>contacto@lvconstructora.cl</li>
+              <li>Ahumada 254, Oficina 806.</li>
             </ul>
           </div>
           <div className={styles.itemColumn}>

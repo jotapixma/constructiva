@@ -10,8 +10,8 @@ const BrandCard = ({brand}) => {
       <figure className={styles.brandCard__mask}>
         <Image 
           src={brand.image} 
-          width={150} 
-          height={150} 
+          width={170} 
+          height={170} 
           layout="intrinsic" 
           alt="brand" 
         />

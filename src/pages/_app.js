@@ -1,5 +1,5 @@
 import '@/styles/globals.scss'
-import '../styles/slick-custom.scss'
+import '../styles/slick-custom.scss';
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 let theme = createTheme({

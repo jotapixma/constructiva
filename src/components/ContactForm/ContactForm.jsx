@@ -7,6 +7,7 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { Button } from '../../components/Buttons/Button'
 import * as yup from 'yup';
+import axios from 'axios';
 import styles from './ContactForm.module.scss';
 
 const ContactForm = ({title}) => {
@@ -23,9 +24,45 @@ const ContactForm = ({title}) => {
     resolver: yupResolver(schema),
   });
 
+  const sendFormToEmail = async (data) => {
+    try {
+      const response = await axios({
+        method: 'post',
+        url: '/api/sendEmail',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+        },
+        data: JSON.stringify(data)
+      })
+
+      if (response.status == 200) {
+        alert('Correo enviado con éxito');
+      } else {
+        alert('Error al enviar correo');
+      }
+    } catch (error) {
+      console.log('Fetch error: ', error);
+    }
+  }
+
+  const formatData = (data) => {
+    const formData = {
+      'email': data.email,
+      'message': data.text,
+      'subject': data.fullName,
+      'to' : ''
+      // 'subject': data.
+    }
+    return formData;
+  }
+
   const onSubmit = (data) => {
     try {
       console.log('data:', data);
+      const newData = formatData(data);
+      console.log('newData:', newData);
+      sendFormToEmail(newData);
     } catch (e) {
       console.log('error')
     }

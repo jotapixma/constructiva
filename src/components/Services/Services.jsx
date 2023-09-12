@@ -16,7 +16,8 @@ let items = [
     "id": '2',
     "icon": 'construccion',
     "title": 'Construcción y Habilitación',
-    "descripcion" : '* Servicios de planificación, diseño, construcción y completa administración de Obras civiles. * Habilitaciones y remodelaciones de espacios interiores y exteriores, lo cual, implica desarrollo y ejecución de trabajos estructurales, terminaciones (Pinturas, instalación de pavimentos, revestimientos, etc.), mobiliarios, especialidades ( Eléctricas, sanitarias, detección extinción de incendios, gas, clima, etc.) y todo necesario para adaptar el entorno a lo requerido por el cliente.'
+    "descripcion" : 'Servicios de planificación, diseño, construcción y completa administración de Obras civiles. * Habilitaciones y remodelaciones de espacios interiores y exteriores',
+    "descripcion_2" : '* Servicios de planificación, diseño, construcción y completa administración de Obras civiles. * Habilitaciones y remodelaciones de espacios interiores y exteriores, lo cual, implica desarrollo y ejecución de trabajos estructurales, terminaciones (Pinturas, instalación de pavimentos, revestimientos, etc.), mobiliarios, especialidades ( Eléctricas, sanitarias, detección extinción de incendios, gas, clima, etc.) y todo necesario para adaptar el entorno a lo requerido por el cliente.'
   },
   {
     "id": '3',

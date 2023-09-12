@@ -54,7 +54,7 @@ const Purpose = ({title}) => {
             </Grid> */}
             <Grid item xs={12} md={8}>
               <figure className={styles.imgMask}>
-                <Image src="/proposito-2.jpeg" width={828} height={457} layout="responsive" alt="propósito"></Image>
+                <Image src="/proposito.webp" width={828} height={457} layout="responsive" alt="propósito"></Image>
               </figure>
             </Grid>
           </Grid>

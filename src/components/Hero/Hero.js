@@ -7,6 +7,7 @@ import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import Image from "next/legacy/image";
 import useMediaQuery from '@mui/material/useMediaQuery';
+import { Button } from '../../components/Buttons/Button'
 import styles from './Hero.module.scss';
 
 // Import Swiper styles
@@ -20,22 +21,24 @@ SwiperCore.use([Autoplay]);
 let items = [
   {
     "id": '1',
-    "image": '/hero-1.jpg',
-    "image_mobile": '/hero-1-mobile.jpeg',
-    "title": 'Nuestros clientes validan nuestra visión',
+    "image": '/hero-3.jpeg',
+    "image_mobile": 'https://picsum.photos/900/1300',
+    "title": 'Habilitamos tu espacio',
+    "button_text": 'Contáctanos'
   },
   {
     "id": '2',
-    "image": '/hero-3.jpeg',
-    "image_mobile": 'https://picsum.photos/900/1300',
-    "title": 'Constructora LV apoyando el Ecosistema',
+    "image": '/hero-1.jpg',
+    "image_mobile": '/hero-1-mobile.jpeg',
+    "title": 'Diseña y construye con nosotros',
+    "button_text": 'Contáctanos'
   },
-  {
-    "id": '3',
-    "image": '/hero-4.jpg',
-    "image_mobile": 'https://picsum.photos/900/1300',
-    "title": 'Top 20 mejores empresas de Chile',
-  },
+  // {
+  //   "id": '3',
+  //   "image": '/hero-4.jpg',
+  //   "image_mobile": 'https://picsum.photos/900/1300',
+  //   "title": 'Top 20 mejores empresas de Chile',
+  // },
 ];
 
 
@@ -74,7 +77,10 @@ export default function Hero({sliderItems}) {
                 <article className={styles.hero}>
                   <div className={styles.heroBody}>
                     <div className={styles.heroBody__container}>
-                      <h1 className={styles.heroTitle}>{item.title}</h1>
+                      <div className={styles.heroBox}>
+                        <h1 className={styles.heroTitle}>{item.title}</h1>
+                        <Button uppercase="true">Contáctanos</Button>
+                      </div>
                     </div>
                   </div>
                   {matchesMd ? (

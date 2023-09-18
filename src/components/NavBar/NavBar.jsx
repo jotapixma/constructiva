@@ -18,7 +18,7 @@ import Image from 'next/image';
 import styles from './NavBar.module.scss';
 
 const drawerWidth = 240;
-const navItems = ['¿Que hacemos?', 'Nosotros', 'Contacto'];
+const navItems = ['¿Que hacemos?', 'Contacto'];
 
 function DrawerAppBar(props) {
   const { window } = props;
@@ -32,7 +32,7 @@ function DrawerAppBar(props) {
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <figure>
         <Image 
-          src="/logo-constructora-lv-white.png"
+          src="/icono-lv-negro.png"
           width={162} height={25} 
           layout="intrinsic"  
           alt="logo"

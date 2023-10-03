@@ -59,7 +59,7 @@ const ContactForm = ({title}) => {
 
   const onSubmit = (data) => {
     try {
-      console.log('data:', data);
+      // console.log('data:', data);
       const newData = formatData(data);
       console.log('newData:', newData);
       sendFormToEmail(newData);

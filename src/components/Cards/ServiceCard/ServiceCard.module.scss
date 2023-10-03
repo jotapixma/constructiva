@@ -1,6 +1,6 @@
 .serviceCard {
   // width: 200px;
-  min-height: 300px;
+  min-height: 200px;
   perspective: 1000px;
   position: relative;
   cursor: pointer;
@@ -30,8 +30,9 @@
   &__front {
     // background-color: #3498db;
     transform: rotateY(0deg);
+    padding: 0.5rem;
   }
-
+  
   &__back {
     // background-color: #e74c3c;
     transform: rotateY(180deg);
@@ -57,6 +58,10 @@
 
   &:hover .serviceCard__inner {
     transform: rotateY(180deg);
+  }
+
+  @media only screen and (min-width: $breakpoint_md) {
+    min-height: 300px;
   }
 }
 

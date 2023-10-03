@@ -1,7 +1,7 @@
 import React from 'react';
 import Container from '@mui/material/Container';
-import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import BrandCard from '../Cards/BrandCard/BrandCard';
 import Box from '@mui/material/Box';
 import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
@@ -59,7 +59,7 @@ const CategoriesPanel  = ({title}) => {
           <Swiper
             modules={[Navigation]}
             spaceBetween={8}
-            slidesPerView={5}
+            slidesPerView={4.5}
             loop={true}
             // breakpoints={{
             //   1024: {

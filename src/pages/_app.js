@@ -1,6 +1,13 @@
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import React from 'react';
 import '@/styles/globals.scss'
 import '../styles/slick-custom.scss';
-import { createTheme, ThemeProvider } from "@mui/material/styles";
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/swiper-bundle.css';
 
 let theme = createTheme({
   colors: {

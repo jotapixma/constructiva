@@ -1,83 +1,99 @@
-import React, { useState, useEffect } from 'react';
-import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
-import TextField from '@mui/material/TextField';
-import Container from '@mui/material/Container';
-import { useForm } from 'react-hook-form';
-import { yupResolver } from '@hookform/resolvers/yup';
-import { Button } from '../../components/Buttons/Button'
-import * as yup from 'yup';
-import axios from 'axios';
-import styles from './ContactForm.module.scss';
+import React, { useState, useEffect } from "react";
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
+import TextField from "@mui/material/TextField";
+import Container from "@mui/material/Container";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { Button } from "../../components/Buttons/Button";
+import * as yup from "yup";
+import axios from "axios";
+import styles from "./ContactForm.module.scss";
 
-const ContactForm = ({title}) => {
-
+const ContactForm = ({ title }) => {
   const schema = yup.object().shape({
-    email: yup.string().email("El email debe poseer un formato correcto").required("El email es requerido"),
+    email: yup
+      .string()
+      .email("El email debe poseer un formato correcto")
+      .required("El email es requerido"),
     name: yup.string().required("El nombre es requerido"),
     fullName: yup.string().required("El Apellido es requerido"),
     text: yup.string().required("El comentario es requerido"),
     // phone: yup.string().optional(),
-  })
+  });
 
-  const { register, handleSubmit, control, setValue, formState: { errors }, reset } = useForm({
+  const {
+    register,
+    handleSubmit,
+    control,
+    setValue,
+    formState: { errors },
+    reset,
+  } = useForm({
     resolver: yupResolver(schema),
   });
 
   const sendFormToEmail = async (data) => {
     try {
       const response = await axios({
-        method: 'post',
-        url: '/api/sendEmail',
+        method: "post",
+        url: "/api/sendEmail",
         headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json',
+          Accept: "application/json",
+          "Content-Type": "application/json",
         },
-        data: JSON.stringify(data)
-      })
+        data: JSON.stringify(data),
+      });
 
       if (response.status == 200) {
-        alert('Correo enviado con éxito');
+        alert("Correo enviado con éxito");
       } else {
-        alert('Error al enviar correo');
+        alert("Error al enviar correo");
       }
     } catch (error) {
-      console.log('Fetch error: ', error);
+      console.log("Fetch error: ", error);
     }
-  }
+  };
 
   const formatData = (data) => {
     const formData = {
-      'email': data.email,
-      'message': data.text,
-      'subject': data.fullName,
-      'to' : ''
-      // 'subject': data.
-    }
+      email: data.email,
+      message: data.text,
+      name: `${
+        data.name.charAt(0).toUpperCase() + data.name.slice(1).toLowerCase()
+      } ${
+        data.fullName.charAt(0).toUpperCase() +
+        data.fullName.slice(1).toLowerCase()
+      }`,
+      to: "contacto@lvconstructora.cl",
+      subject: "Has sido contactado por un cliente",
+    };
     return formData;
-  }
-
+  };
+ 
+  
   const onSubmit = (data) => {
     try {
       // console.log('data:', data);
       const newData = formatData(data);
-      console.log('newData:', newData);
+      console.log("newData:", newData);
       sendFormToEmail(newData);
+      reset()
     } catch (e) {
-      console.log('error')
+      console.log("error");
     }
-  }
+  };
 
   const onError = (error) => {
-    console.log('Fetch error: ', error);
-  }
+    console.log("Fetch error: ", error);
+  };
 
-  return (  
+  return (
     <section className={`contact-form ${styles.formPanel}`}>
       <Container>
         <div className="title-container title-container__white">
           <h2 className="title">{title}</h2>
-        </div>  
+        </div>
         <Box
           component="form"
           noValidate
@@ -95,7 +111,7 @@ const ContactForm = ({title}) => {
                 id="outlined-required"
                 InputLabelProps={{
                   shrink: true,
-                }}  
+                }}
                 label="Nombre"
                 placeholder="Nombre"
                 {...register("name")}
@@ -103,7 +119,7 @@ const ContactForm = ({title}) => {
                 helperText={errors.name ? errors.name.message : " "}
               />
             </Grid>
-            <Grid item xs={12} md={6} >
+            <Grid item xs={12} md={6}>
               <TextField
                 fullWidth
                 size="small"
@@ -111,16 +127,16 @@ const ContactForm = ({title}) => {
                 id="outlined-required"
                 InputLabelProps={{
                   shrink: true,
-                }}              
+                }}
                 label="Apellido"
                 // placeholder="nombre@mail.com"
                 {...register("fullName")}
                 // error={Boolean(errors.email)}
                 // helperText={errors.email ? errors.email.message : " "}
-                variant='outlined'
+                variant="outlined"
               />
             </Grid>
-            <Grid item xs={12} md={12} >
+            <Grid item xs={12} md={12}>
               <TextField
                 fullWidth
                 size="small"
@@ -128,14 +144,14 @@ const ContactForm = ({title}) => {
                 id="outlined-required"
                 InputLabelProps={{
                   shrink: true,
-                }}              
+                }}
                 label="Correo electrónico"
                 placeholder="nombre@mail.com"
                 {...register("email")}
                 error={Boolean(errors.email)}
                 helperText={errors.email ? errors.email.message : " "}
                 // defaultValue={email}
-                variant='outlined'
+                variant="outlined"
               />
             </Grid>
             <Grid item xs={12} md={12}>
@@ -146,9 +162,8 @@ const ContactForm = ({title}) => {
                 {...register("text")}
                 placeholder="Mensaje"
                 sx={{
-                  '& .MuiInputBase-input':
-                    { 
-                    fontSize: '1rem',
+                  "& .MuiInputBase-input": {
+                    fontSize: "1rem",
                   },
                 }}
                 multiline
@@ -165,6 +180,6 @@ const ContactForm = ({title}) => {
       </Container>
     </section>
   );
-}
- 
+};
+
 export default ContactForm;

@@ -2,7 +2,7 @@ import nodemailer from 'nodemailer';
 import logo from '../../../public/img_mail.png'
 
 export default async (req, res) => {
-  console.log('rer:', req.body);
+  // console.log('rer:', req.body);
   try {
     const transporter = nodemailer.createTransport({
       host: 'mail.lvconstructora.cl',

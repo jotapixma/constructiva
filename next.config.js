@@ -3,10 +3,8 @@
 const path = require('path')
 
 const nextConfig = {
-  // output: 'export',
-  // reactStrictMode: true,
-  // swcMinify: true,
-  // distDir: 'build',
+  reactStrictMode: true,
+  swcMinify: true,
   images: {
     unoptimized: true,
     domains: ['picsum.photos','i.picsum.photos' ],

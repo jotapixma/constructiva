@@ -89,7 +89,7 @@ const ContactForm = ({ title }) => {
   };
 
   return (
-    <section className={`contact-form ${styles.formPanel}`}>
+    <section className={`contact-form ${styles.formPanel}`} id="contact"> 
       <Container>
         <div className="title-container title-container__white">
           <h2 className="title">{title}</h2>

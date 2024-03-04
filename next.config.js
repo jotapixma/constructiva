@@ -6,7 +6,7 @@ const nextConfig = {
   // output: 'export',
   // reactStrictMode: true,
   // swcMinify: true,
-  distDir: 'build',
+  // distDir: 'build',
   images: {
     unoptimized: true,
     domains: ['picsum.photos','i.picsum.photos' ],

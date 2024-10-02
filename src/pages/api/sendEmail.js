@@ -1,17 +1,17 @@
-import nodemailer from 'nodemailer';
-import logo from '../../../public/img_mail.png'
+import nodemailer from "nodemailer";
+import logo from "../../../public/img_mail.png";
 
 export default async (req, res) => {
   // console.log('rer:', req.body);
   try {
     const transporter = nodemailer.createTransport({
-      host: 'mail.lvconstructora.cl',
+      host: "mail.lvconstructora.cl",
       port: 465,
-      secure: true, 
+      secure: true,
       //service: 'Gmail', // o tu proveedor de correo electrónico preferido
       auth: {
-        user: 'infomacion@lvconstructora.cl', //
-        pass: 'lvconstructora18',
+        user: "_mainaccount@lvconstructora.cl", //
+        pass: "Pablo.avc0",
       },
     });
 
@@ -47,12 +47,12 @@ export default async (req, res) => {
       
       `,
     };
-
+    console.log(mailOptions);
     await transporter.sendMail(mailOptions);
 
-    res.status(200).json({ message: 'Correo enviado con éxito' });
+    res.status(200).json({ message: "Correo enviado con éxito" });
   } catch (error) {
-    console.error('Error al enviar el correo:', error);
-    res.status(500).json({ error: 'Error al enviar el correo' });
+    console.error("Error al enviar el correo:", error);
+    res.status(500).json({ error: "Error al enviar el correo" });
   }
 };

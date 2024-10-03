@@ -1,9 +1,10 @@
 import React from 'react';
 import Container from '@mui/material/Container';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import FooterWinch from './FooterWinch/FooterWinch';
 import RrssItem from './RrssItem/RrssItem';
 import Box from '@mui/material/Box';
+import Link from 'next/link';
 import styles from './Footer.module.scss';
 
 const Footer = () => {
@@ -36,16 +37,6 @@ const Footer = () => {
       <Container>
         <div className={styles.gridColumns}>
           <div className={styles.itemColumn}>
-            <figure>
-              <Image 
-                src="/logo-constructora-lv-white.png"
-                width={162} height={25} 
-                layout="intrinsic"  
-                alt="logo"
-              />
-            </figure>
-          </div>
-          <div className={styles.itemColumn}>
             <ul className={styles.unorderList}>
               <span>Contacto</span>
               <li>+56 9 6104 5977</li>
@@ -53,13 +44,13 @@ const Footer = () => {
               <li>Ahumada 254, Oficina 806.</li>
             </ul>
           </div>
-          <div className={styles.itemColumn}>
+          {/* <div className={styles.itemColumn}>
             <ul className={styles.unorderList}>
               <span>Navegación</span>
               <li>Proyectos</li>
               <li>Contacto</li>
             </ul>
-          </div>
+          </div> */}
           <div className={styles.itemColumn}>
             <ul className={styles.unorderList}>
               <span>Siguenos</span>
@@ -71,6 +62,17 @@ const Footer = () => {
                 </Box>
               }
             </ul>
+          </div>
+          <div className={styles.itemColumn}>
+            <Link href="/">
+              <figure className={styles.footerLogo}>
+                <Image 
+                  src="/logo-constructora-lv-white.png"
+                  width={1480} height={877} 
+                  alt="logo"
+                />
+              </figure>
+            </Link>
           </div>
         </div>
         <FooterWinch />

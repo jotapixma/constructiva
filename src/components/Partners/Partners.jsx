@@ -14,10 +14,10 @@ import 'swiper/css/navigation';
 
 
 let brands = [
-  {
-      "url": "/",
-      "image": "/brands/logo-antumanal.webp"
-  },
+  // {
+  //     "url": "/",
+  //     "image": "/brands/logo-antumanal.webp"
+  // },
   {
     "url": "/",
     "image": "/brands/constructiva.jpg"

@@ -24,14 +24,16 @@ let items = [
     "image": '/hero-3.jpeg',
     "image_mobile": '/hero-3.jpeg',
     "title": 'Habilitamos tu espacio',
-    "button_text": 'Contáctanos'
+    "button_text": 'Contáctanos',
+    "url_link" : '#contact'
   },
   {
     "id": '2',
     "image": '/hero-1.jpg',
     "image_mobile": '/hero-1.jpg',
     "title": 'Diseña y construye con nosotros',
-    "button_text": 'Contáctanos'
+    "button_text": 'Contáctanos',
+    "url_link": '#contact',
   },
   // {
   //   "id": '3',
@@ -79,7 +81,7 @@ export default function Hero({sliderItems}) {
                     <div className={styles.heroBody__container}>
                       <div className={styles.heroBox}>
                         <h1 className={styles.heroTitle}>{item.title}</h1>
-                        <Button uppercase="true">Contáctanos</Button>
+                        <a className="primary-button" href={`${item.url_link}`}>Contáctanos</a>
                       </div>
                     </div>
                   </div>

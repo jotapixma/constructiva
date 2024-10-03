@@ -29,7 +29,7 @@ let items = [
 
 const Purpose = ({title}) => {
   return (  
-    <section className={styles.purposePanel}>
+    <section className={styles.purposePanel} id="wedo">
       <Container>
         <div className="title-container">
           <h2 className="title">{title}</h2>

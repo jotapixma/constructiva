@@ -14,11 +14,21 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import Image from 'next/image';
+import Image from "next/legacy/image";
+import Link from 'next/link';
 import styles from './NavBar.module.scss';
 
 const drawerWidth = 240;
-const navItems = ['¿Que hacemos?', 'Contacto'];
+const navItems = [
+  {
+    'title': 'Nuestro propósito',
+    'href': '#wedo'
+  },
+  {
+    'title': 'Contacto',
+    'href': '#contact'
+  }
+];
 
 function DrawerAppBar(props) {
   const { window } = props;
@@ -30,20 +40,24 @@ function DrawerAppBar(props) {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <figure>
-        <Image 
-          src="/icono-lv-negro.png"
-          width={162} height={25} 
-          layout="intrinsic"  
-          alt="logo"
-        />
-      </figure>
+      <Link href="/">
+        <figure className={styles.logoContainer}>
+          <Image 
+            src="/icono-lv-negro.png"
+            width={1018} height={877} 
+            layout="responsive"  
+            alt="logo"
+          />
+        </figure>
+      </Link>
       <Divider />
       <List>
-        {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
+        {navItems.map((item,index) => (
+          <ListItem key={index} disablePadding>
             <ListItemButton sx={{ textAlign: 'center' }}>
-              <ListItemText primary={item} />
+              <a href={`${item.href}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                <ListItemText primary={item.title} />
+              </a>
             </ListItemButton>
           </ListItem>
         ))}
@@ -57,7 +71,7 @@ function DrawerAppBar(props) {
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
       <AppBar className={styles.themeBar} component="nav">
-        <Toolbar>
+        <Toolbar className={styles.toolBar}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -68,21 +82,25 @@ function DrawerAppBar(props) {
             <MenuIcon />
           </IconButton>
           <Box
+            className={styles.logoBox}
             sx={{ flexGrow: 1, display: { sm: 'block'  } }}
           >
-            <figure>
-              <Image 
-                src="/logo-constructora-lv-white.png"
-                width={162} height={25} 
-                layout="intrinsic"  
-                alt="logo"
-              />
-            </figure>
+            <Link href="/">
+              <figure>
+                <Image 
+                  src="/logo-constructora-lv-white.png"
+                  width={1480} height={877} 
+                  alt="logo"
+                />
+              </figure>
+            </Link>
           </Box>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
               <Button key={item} sx={{ color: '#fff' }}>
-                {item}
+                <a href={`${item.href}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                  {item.title}
+                </a>
               </Button>
             ))}
           </Box>

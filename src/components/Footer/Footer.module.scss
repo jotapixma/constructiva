@@ -1,6 +1,6 @@
 .footer{
   background-color: $secondary;
-  padding: 60px 0;
+  padding: 30px 0 60px 0;
   border-top: 2px solid $primary;
   p{
     color: $white;
@@ -9,9 +9,13 @@
   .gridColumns{
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 2rem;
+    gap: 1rem;
     @media only screen and (min-width: $breakpoint_md){
       grid-template-columns: repeat(5, 1fr);
+    }
+    .footerLogo{
+      max-width: 180px;
+      margin: 0 auto;
     }
     .itemColumn{
       .unorderList{
@@ -27,7 +31,7 @@
         li{
           font-weight: 400;
           font-size: 0.9rem;
-          margin: 0.6rem 0;
+          margin: 0.5rem 0;
           color: $white;
           color: $white;
         }

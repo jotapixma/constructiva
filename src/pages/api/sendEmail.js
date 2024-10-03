@@ -10,8 +10,8 @@ export default async (req, res) => {
       secure: true,
       //service: 'Gmail', // o tu proveedor de correo electrónico preferido
       auth: {
-        user: "_mainaccount@lvconstructora.cl", //
-        pass: "Pablo.avc0",
+        user: "infomacion@lvconstructora.cl", //"_mainaccount@lvconstructora.cl", //
+        pass: "v5uixypkCqcN", //"Pablo.avc0",
       },
     });
 
@@ -53,6 +53,6 @@ export default async (req, res) => {
     res.status(200).json({ message: "Correo enviado con éxito" });
   } catch (error) {
     console.error("Error al enviar el correo:", error);
-    res.status(500).json({ error: "Error al enviar el correo" });
+    res.status(500).json({ error: error });
   }
 };

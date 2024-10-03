@@ -10,9 +10,11 @@ export default async (req, res) => {
       secure: true,
       //service: 'Gmail', // o tu proveedor de correo electrónico preferido
       auth: {
-        user: "infomacion@lvconstructora.cl", //"_mainaccount@lvconstructora.cl", //
-        pass: "v5uixypkCqcN", //"Pablo.avc0",
+        user: "contacto@lvconstructora.cl",
+        pass: "Pablo.avc0",
       },
+      // logger: true, // Habilita el registro de nodemailer
+      // debug: true, // Activa el modo debug
     });
 
     const mailOptions = {

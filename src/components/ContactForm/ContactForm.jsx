@@ -108,6 +108,7 @@ const ContactForm = ({ title, border }) => {
                 fullWidth
                 type="text"
                 size="small"
+                required
                 id="outlined-required"
                 InputLabelProps={{
                   shrink: true,

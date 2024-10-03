@@ -4,6 +4,7 @@ import Grid from '@mui/material/Grid';
 import ContactForm from '../ContactForm/ContactForm';
 import ContentPanel from './ContentPanel/ContentPanel';
 import Image from "next/legacy/image";
+import GalleryCard from '@/components/Cards/GalleryCard/GalleryCard';
 import styles from './SingleProyect.module.scss';
 
 const SingleProyect = ({proyecto}) => {
@@ -29,24 +30,36 @@ const SingleProyect = ({proyecto}) => {
               </figure> 
             </Grid>
             <Grid item xs={12} md={6}>
-              <div className={styles.goalsPanel}>
+              {/* <div className={styles.goalsPanel}>
                 <h2 className={styles.title}>{proyecto.description}</h2>
                 {proyecto.goals && proyecto.goals.length > 0 && (
                   proyecto.goals.map((goal, index) => (
                     <li key={index}>{goal}</li>
                   ))
                 )}
-              </div>
-              {/* <ContactForm/> */}
+              </div> */}
+              <Grid container spacing={1}>
+                {proyecto.gallery.map((item, index) => (
+                  <Grid item xs={6} md={6} key={index}>
+                    <GalleryCard item={item}/>
+                  </Grid>
+                ))}
+              </Grid>
             </Grid>
           </Grid>
         </Container>
       </Box>
+      <Box className={styles.formContainer}>
+        <Container>
+          <ContactForm title="Contáctanos" border="true"/>
+        </Container>
+      </Box>
       
-      <ContentPanel proyecto={proyecto}/>
+      {/* <ContentPanel proyecto={proyecto}/> */}
 
     </section>
   );
 }
- 
+
 export default SingleProyect;
+{/* <ContactForm/> */}

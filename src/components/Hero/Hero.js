@@ -22,7 +22,7 @@ let items = [
   {
     "id": '1',
     "image": 'banners/banner-1.jpg',
-    "image_mobile": '/hero-3.jpeg',
+    "image_mobile": 'banners/banner-1-mobile.jpg',
     "title": 'Habilitamos tu espacio',
     "button_text": 'Contáctanos',
     "url_link" : '#contact'
@@ -30,7 +30,7 @@ let items = [
   {
     "id": '2',
     "image": 'banners/banner-2.jpg',
-    "image_mobile": '/hero-1.jpg',
+    "image_mobile": 'banners/banner-2-mobile.jpg',
     "title": 'Diseña y construye con nosotros',
     "button_text": 'Contáctanos',
     "url_link": '#contact',
@@ -38,13 +38,13 @@ let items = [
   {
     "id": '3',
     "image": 'banners/banner-3.jpg',
-    "image_mobile": '/hero-3.jpeg',
+    "image_mobile": 'banners/banner-3-mobile.jpg',
     "title": '',
   },
   {
     "id": '4',
     "image": 'banners/banner-4.jpg',
-    "image_mobile": '/hero-1.jpg',
+    "image_mobile": 'banners/banner-4-mobile.jpg',
     "title": '',
   },
 ];

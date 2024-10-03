@@ -31,4 +31,11 @@
       }
     }
   }
+  .formContainer{
+    padding: 2rem 0;
+    @media only screen and (min-width: $breakpoint_md) {
+      max-width: 60%;
+      margin: 0 auto;
+    }
+  }
 }

@@ -17,7 +17,7 @@
   {
     "id": 2,
     "name": "Plataforma de E-commerce",
-    "image": "/proyectos/obra-ph-5.jpg",
+    "image": "/proyectos/obra-ph-1.jpg",
     "gallery": [
       { "image": "/proyectos/obra-ph-2.jpg", "alt": "Imagen 1" },
       { "image": "/proyectos/obra-ph-3.jpg", "alt": "Imagen 2" },
@@ -58,7 +58,7 @@
   {
     "id": 5,
     "name": "Terminaciones en EEMM",
-    "image": "/proyectos/eemm-1.jpg",
+    "image": "/proyectos/eemm-5.jpg",
     "gallery": [
       { "image": "/proyectos/eemm-2.jpg", "alt": "Imagen 1" },
       { "image": "/proyectos/eemm-3.jpg", "alt": "Imagen 2" },
@@ -71,7 +71,7 @@
   },
   {
     "id": 6,
-    "name": "Remodelación Pedidos Ya piso 7 y 8",
+    "name": "Remodelación Oficinas Corporativas Pedidos Ya Piso 7 y 8",
     "image": "/proyectos/pedidoya-1.jpg",
     "gallery": [
       { "image": "/proyectos/pedidoya-2.jpg", "alt": "Imagen 1" },
@@ -81,7 +81,7 @@
       { "image": "/proyectos/pedidoya-6.jpg", "alt": "Imagen 2" },
       { "image": "/proyectos/pedidoya-7.jpg", "alt": "Imagen 2" }
     ],
-    "title": "Obras Varias en Terminaciones en Remodelación Pedidos Ya piso 7 y 8",
+    "title": "Remodelación Oficinas Corporativas Pedidos Ya Piso 7 y 8",
     "description": "Obras Varias en Terminaciones en Remodelación Pedidos Ya piso 7 y 8",
     "goals": []  
   }

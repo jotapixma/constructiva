@@ -1,0 +1,23 @@
+.boxContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  .item{
+    margin-bottom: 8px;
+    &__head{
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      .title{
+        font-size: 1.1rem;
+      }
+      svg{
+        font-size: 1.2rem;
+      }
+    }
+    .description{
+      font-size: 1rem;
+      color: $gray_default;
+    }
+  }
+}

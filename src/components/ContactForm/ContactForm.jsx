@@ -10,7 +10,7 @@ import * as yup from "yup";
 import axios from "axios";
 import styles from "./ContactForm.module.scss";
 
-const ContactForm = ({ title }) => {
+const ContactForm = ({ title, border }) => {
   const schema = yup.object().shape({
     email: yup
       .string()
@@ -89,7 +89,7 @@ const ContactForm = ({ title }) => {
   };
 
   return (
-    <section className={`contact-form ${styles.formPanel}`} id="contact"> 
+    <section className={`contact-form ${styles.formPanel} ${border && styles.fullBorder}`} id="contact"> 
       <Container>
         <div className="title-container title-container__white">
           <h2 className="title">{title}</h2>

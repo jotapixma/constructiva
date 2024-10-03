@@ -3,7 +3,6 @@
   min-height: 200px;
   perspective: 1000px;
   position: relative;
-  cursor: pointer;
 
   &__inner {
     width: 100%;
@@ -59,9 +58,9 @@
  
   @media only screen and (min-width: $breakpoint_md) {
     min-height: 300px;
-    &:hover .serviceCard__inner {
-      transform: rotateY(180deg);
-    }
+    // &:hover .serviceCard__inner {
+    //   transform: rotateY(180deg);
+    // }
   
   }
 }

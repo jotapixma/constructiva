@@ -22,11 +22,15 @@ const drawerWidth = 240;
 const navItems = [
   {
     'title': 'Nuestro propósito',
-    'href': '#wedo'
+    'href': '/#wedo'
   },
   {
     'title': 'Contacto',
-    'href': '#contact'
+    'href': '/#contact'
+  },
+  {
+    'title': 'Proyectos',
+    'href': '/proyectos'
   }
 ];
 

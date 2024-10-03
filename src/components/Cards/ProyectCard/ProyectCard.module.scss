@@ -1,0 +1,24 @@
+.cardBox{
+  margin-top: 1rem;
+  .textBox{
+    margin-top: 0.25rem;
+    .title{
+      color: $secondary;
+      font-size: 1.2rem;
+    }
+    .description{
+      font-size: 1rem;
+      color: $black;
+      font-weight: 500;
+    }
+  }
+  &:hover{
+    cursor: pointer;
+    // box-shadow: 0 1px 8px rgb(154 154 154/10%), 0 3px 3px rgb(178 178 178/10%), 0 3px 21px #e8ebfb;
+    // .imgMask{
+    //   img{
+    //     transform: scale(1.1);
+    //   }
+    // }
+  }
+}

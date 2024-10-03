@@ -22,16 +22,16 @@ const ServiceCard = ({item}) => {
 
   return ( 
     <div className={styles.serviceCard}>
-    <div className={styles['serviceCard__inner']}>
-      <div className={`${styles['serviceCard__face']} ${styles['serviceCard__front']}`}>
-        {iconComponent(item)}
-        <h3 className={styles.title}>{item.title}</h3>
-      </div>
-      <div className={`${styles['serviceCard__face']} ${styles['serviceCard__back']}`}>
-        <p className={styles.description}>{item.descripcion}</p>
+      <div className={styles['serviceCard__inner']}>
+        <div className={`${styles['serviceCard__face']} ${styles['serviceCard__front']}`}>
+          {iconComponent(item)}
+          <h3 className={styles.title}>{item.title}</h3>
+        </div>
+        <div className={`${styles['serviceCard__face']} ${styles['serviceCard__back']}`}>
+          <p className={styles.description}>{item.descripcion}</p>
+        </div>
       </div>
     </div>
-  </div>
     // <div className={styles.serviceCard}>
     //   <div className={styles.serviceCard__front}>
     //     {iconComponent(item)}

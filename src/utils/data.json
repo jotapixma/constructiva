@@ -1,0 +1,88 @@
+[
+  {
+    "id": 1,
+    "name": "Sistema de Gestión Empresarial",
+    "image": "/proyectos/larrain-1.jpg",
+    "gallery": [
+      { "image": "/proyectos/larrain-2.jpg", "alt": "Imagen 1" },
+      { "image": "/proyectos/larrain-3.jpg", "alt": "Imagen 2" },
+      { "image": "/proyectos/larrain-4.jpg", "alt": "Imagen 1" },
+      { "image": "/proyectos/larrain-5.jpg", "alt": "Imagen 2" },
+      { "image": "/proyectos/larrain-6.jpg", "alt": "Imagen 2" }
+    ],
+    "title": "Proyecto - Larraín Sánchez",
+    "description": "Obras varias de terminaciones en proyecto Larraín Sánchez",
+    "goals": ["Excavaciones","Impermeabilizaciones", "Instalación de revestimientos y pavimentos","Instalación de cercado eléctrico y certificación SEC"]
+  },
+  {
+    "id": 2,
+    "name": "Plataforma de E-commerce",
+    "image": "/proyectos/obra-ph-5.jpg",
+    "gallery": [
+      { "image": "/proyectos/obra-ph-2.jpg", "alt": "Imagen 1" },
+      { "image": "/proyectos/obra-ph-3.jpg", "alt": "Imagen 2" },
+      { "image": "/proyectos/obra-ph-4.jpg", "alt": "Imagen 1" },
+      { "image": "/proyectos/obra-ph-1.jpg", "alt": "Imagen 2" }
+    ],
+    "title": "Obra PH Las Condes",
+    "description": "Obras varias de terminaciones en proyecto PH Las Condes",
+    "goals": ["Impermeabilizaciones", "Ejecución de muros de albañilería","Instalación de revestimientos y pavimentos"]
+  },
+  {
+    "id": 3,
+    "name": "Aplicación de Recursos Humanos",
+    "image": "/proyectos/bano-pedidoya-1.jpg",
+    "gallery": [
+      { "image": "/proyectos/bano-pedidoya-2.jpg", "alt": "Imagen 1" },
+      { "image": "/proyectos/bano-pedidoya-3.jpg", "alt": "Imagen 2" },
+      { "image": "/proyectos/bano-pedidoya-4.jpg", "alt": "Imagen 1" },
+      { "image": "/proyectos/bano-pedidoya-5.jpg", "alt": "Imagen 2" }
+    ],
+    "title": "Baños Pedidos Ya",
+    "description": "Obras Varias en Terminaciones en Proyecto de baños Pedidos Ya",
+    "goals": []
+  },
+  {
+    "id": 4,
+    "name": "Sistema de Seguimiento de Proyectos",
+    "image": "/proyectos/aclaro-1.jpg",
+    "gallery": [
+      { "image": "/proyectos/aclaro-2.jpg", "alt": "Imagen 1" },
+      { "image": "/proyectos/aclaro-3.jpg", "alt": "Imagen 2" },
+      { "image": "/proyectos/aclaro-4.jpg", "alt": "Imagen 1" }
+    ],
+    "title": "Habilitacion de Departamento piloto edificio Aclaro Decombe",
+    "description": "Obras Varias en Terminaciones en Habilitación Departamento Piloto",
+    "goals": []
+  },
+  {
+    "id": 5,
+    "name": "Terminaciones en EEMM",
+    "image": "/proyectos/eemm-1.jpg",
+    "gallery": [
+      { "image": "/proyectos/eemm-2.jpg", "alt": "Imagen 1" },
+      { "image": "/proyectos/eemm-3.jpg", "alt": "Imagen 2" },
+      { "image": "/proyectos/eemm-4.jpg", "alt": "Imagen 1" },
+      { "image": "/proyectos/eemm-5.jpg", "alt": "Imagen 2" }
+    ],
+    "title": "Obras Varias en Terminaciones en EEMM",
+    "description": "Obras Varias en Terminaciones en EEMM",
+    "goals": []  
+  },
+  {
+    "id": 6,
+    "name": "Remodelación Pedidos Ya piso 7 y 8",
+    "image": "/proyectos/pedidoya-1.jpg",
+    "gallery": [
+      { "image": "/proyectos/pedidoya-2.jpg", "alt": "Imagen 1" },
+      { "image": "/proyectos/pedidoya-3.jpg", "alt": "Imagen 2" },
+      { "image": "/proyectos/pedidoya-4.jpg", "alt": "Imagen 1" },
+      { "image": "/proyectos/pedidoya-5.jpg", "alt": "Imagen 2" },
+      { "image": "/proyectos/pedidoya-6.jpg", "alt": "Imagen 2" },
+      { "image": "/proyectos/pedidoya-7.jpg", "alt": "Imagen 2" }
+    ],
+    "title": "Obras Varias en Terminaciones en Remodelación Pedidos Ya piso 7 y 8",
+    "description": "Obras Varias en Terminaciones en Remodelación Pedidos Ya piso 7 y 8",
+    "goals": []  
+  }
+]

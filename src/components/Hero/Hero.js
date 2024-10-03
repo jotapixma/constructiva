@@ -21,7 +21,7 @@ SwiperCore.use([Autoplay]);
 let items = [
   {
     "id": '1',
-    "image": '/hero-3.jpeg',
+    "image": 'banners/banner-1.jpg',
     "image_mobile": '/hero-3.jpeg',
     "title": 'Habilitamos tu espacio',
     "button_text": 'Contáctanos',
@@ -29,18 +29,24 @@ let items = [
   },
   {
     "id": '2',
-    "image": '/hero-1.jpg',
+    "image": 'banners/banner-2.jpg',
     "image_mobile": '/hero-1.jpg',
     "title": 'Diseña y construye con nosotros',
     "button_text": 'Contáctanos',
     "url_link": '#contact',
   },
-  // {
-  //   "id": '3',
-  //   "image": '/hero-4.jpg',
-  //   "image_mobile": 'https://picsum.photos/900/1300',
-  //   "title": 'Top 20 mejores empresas de Chile',
-  // },
+  {
+    "id": '3',
+    "image": 'banners/banner-3.jpg',
+    "image_mobile": '/hero-3.jpeg',
+    "title": '',
+  },
+  {
+    "id": '4',
+    "image": 'banners/banner-4.jpg',
+    "image_mobile": '/hero-1.jpg',
+    "title": '',
+  },
 ];
 
 
@@ -77,20 +83,22 @@ export default function Hero({sliderItems}) {
             items.map((item) => (
               <SwiperSlide key={item.id}>
                 <article className={styles.hero}>
-                  <div className={styles.heroBody}>
-                    <div className={styles.heroBody__container}>
-                      <div className={styles.heroBox}>
-                        <h1 className={styles.heroTitle}>{item.title}</h1>
-                        <a className="primary-button" href={`${item.url_link}`}>Contáctanos</a>
+                  {item.button_text && (
+                    <div className={styles.heroBody}>
+                      <div className={styles.heroBody__container}>
+                        <div className={styles.heroBox}>
+                          <h1 className={styles.heroTitle}>{item.title}</h1>
+                          <a className="primary-button" href={`${item.url_link}`}>{item.button_text}</a>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  )}
                   {matchesMd ? (
                     <figure className={styles.bannerMask}>
                       <Image 
                         src={item.image} 
-                        width={1900} 
-                        height={900} 
+                        width={5860} 
+                        height={2159} 
                         alt={item.title} 
                         priority={true}
                         layout="responsive"

@@ -1,7 +1,7 @@
 .themeBar{
   background-color: $secondary !important;
-  border-bottom: 2px solid $primary;
-  position: relative;
+  border-bottom: 2px solid $primary !important;
+  position: relative !important;
   .logoBox{
     max-width: 150px;
     figure{

@@ -2,6 +2,9 @@
   padding: 2rem 0;
   background-color: $secondary;
   border-radius: 16px 16px 0 0;
+  &.fullBorder{
+    border-radius: 16px;
+  }
   .formBox{
     border: 1px solid $white;
     border-radius: 16px;

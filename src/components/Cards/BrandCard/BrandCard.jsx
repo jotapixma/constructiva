@@ -8,12 +8,12 @@ const BrandCard = ({brand}) => {
   return (
     <article className={styles.brandCard}>
       <figure className={styles.brandCard__mask}>
-        <Image 
+        <img
           src={brand.image} 
-          width={170} 
-          height={170} 
-          layout="intrinsic" 
-          alt="brand" 
+          // width={170} 
+          // height={170} 
+          // layout="intrinsic" 
+          // alt="brand" 
         />
       </figure>
     </article>

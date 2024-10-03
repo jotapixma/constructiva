@@ -176,7 +176,7 @@ const ContactForm = ({ title, border }) => {
               />
             </Grid>
           </Grid>
-          <Button type="submit">Enviar comentario</Button>
+          <Button type="submit">Enviar comentario </Button>
         </Box>
       </Container>
     </section>

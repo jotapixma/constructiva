@@ -30,20 +30,20 @@ const navItems = [
   { title: "Nuestro propósito", href: "/#wedo" },
   { title: "Contacto", href: "/#contact" },
   { title: "Proyectos", href: "/proyectos" },
-  {
-    title: "Servicios",
-    submenu: [
-      { title: "Subcategoría 1", href: "/servicios/1" },
-      { title: "Subcategoría 2", href: "/servicios/2" },
-      {
-        title: "Remodelaciones",
-        submenu: [
-          { title: "Remodelaciones Sub 1", href: "/remodelaciones/1" },
-          { title: "Remodelaciones Sub 2", href: "/remodelaciones/2" },
-        ],
-      },
-    ],
-  },
+  // {
+  //   title: "Servicios",
+  //   submenu: [
+  //     { title: "Subcategoría 1", href: "/servicios/1" },
+  //     { title: "Subcategoría 2", href: "/servicios/2" },
+  //     {
+  //       title: "Remodelaciones",
+  //       submenu: [
+  //         { title: "Remodelaciones Sub 1", href: "/remodelaciones/1" },
+  //         { title: "Remodelaciones Sub 2", href: "/remodelaciones/2" },
+  //       ],
+  //     },
+  //   ],
+  // },
 ];
 
 function DrawerAppBar(props) {
